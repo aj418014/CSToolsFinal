@@ -13,22 +13,23 @@ int countChar(string pName);
 int main(int arguments, char** inputName)
 {
   //input file stream
-  ifstream instream;
+  ifstream fin;
   string characters = "";
   //if there are arguments
   if(arguments == 2)
   {
-    instream.open(inputName[1]);//open file 
-    while(!instream.eof()) 
+    fin.open(inputName[1]);//open file 
+/*    while(!fin.eof()) 
     {
-       characters.append(instream.getline()); //add characters to string
+	char tmp = fin.get();
+
     }
-    
+*/    
   }
   else //otherwise do the normal
   {
    cout << "You entered " << countChar("Ohio University") << " characters.\n";
-   cout << "You entered " << countLine("Athens");
+   cout << "You have entered 1 line";
   }
   return 0;
 }
